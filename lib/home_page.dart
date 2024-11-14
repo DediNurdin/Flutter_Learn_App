@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/biometric_auth/biometric_auth_page.dart';
-import 'package:flutter_learn/weather_app/view/weather_page.dart';
+import 'package:flutter_learn/movie_app/view/movie_page.dart';
+import 'biometric_auth/biometric_auth_page.dart';
+import 'weather_app/view/weather_page.dart';
 import 'package:geolocator/geolocator.dart';
 
 class HomePage extends StatefulWidget {
@@ -55,7 +56,13 @@ class _HomePageState extends State<HomePage> {
                   ? const CupertinoActivityIndicator(
                       color: Colors.white,
                     )
-                  : const Text('Weather App'))
+                  : const Text('Weather App')),
+          btnMenu(() {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const MoviePage()),
+            );
+          }, const Text('Movie App')),
         ],
       ),
     );

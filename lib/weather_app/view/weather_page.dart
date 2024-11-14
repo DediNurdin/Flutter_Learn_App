@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/weather_app/model/weather_model.dart';
-import 'package:flutter_learn/weather_app/services/weather_services.dart';
+import '../model/weather_model.dart';
+import '../services/weather_services.dart';
 import 'package:intl/intl.dart';
 
 class WeatherHome extends StatefulWidget {
